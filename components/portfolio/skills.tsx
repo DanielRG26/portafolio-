@@ -101,24 +101,29 @@ export function Skills() {
           <h3 className="text-lg font-semibold mb-6 text-muted-foreground uppercase tracking-wide">
             Herramientas & Frameworks
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {tools.map((tool, index) => {
               const Icon = tool.icon
               return (
-                <div
+                <Card
                   key={tool.name}
-                  className="group flex items-center gap-3 px-4 py-3 bg-card border border-border rounded-lg hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-default animate-fade-in-up"
+                  className="group border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up"
                   style={{ animationDelay: `${index * 80 + 400}ms` }}
                 >
-                  <div className="transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-6">
-                    <Icon
-                      size={24}
-                      color={tool.useForeground ? undefined : tool.color}
-                      className={`${tool.useForeground ? "text-foreground" : ""} transition-transform duration-300`}
-                    />
-                  </div>
-                  <span className="text-sm font-medium">{tool.name}</span>
-                </div>
+                  <CardContent className="p-6 flex flex-col items-center text-center">
+                    <div
+                      className="mb-3 p-3 rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+                      style={{ backgroundColor: `${tool.color}15` }}
+                    >
+                      <Icon
+                        size={40}
+                        color={tool.useForeground ? undefined : tool.color}
+                        className={tool.useForeground ? "text-foreground" : ""}
+                      />
+                    </div>
+                    <h3 className="font-semibold text-sm">{tool.name}</h3>
+                  </CardContent>
+                </Card>
               )
             })}
           </div>
