@@ -48,7 +48,7 @@ export function Navbar() {
             href="#inicio"
             className="font-mono text-lg font-bold text-primary hover:text-primary/80 transition-colors"
           >
-            {"<DFG />"}
+            Daniel Guevara
           </Link>
 
           {/* Desktop Navigation */}
