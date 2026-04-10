@@ -1,211 +1,59 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
+import {
+  FaJava,
+  FaReact,
+  FaGitAlt,
+  FaDocker,
+  FaPython,
+  FaGithub,
+  FaFigma,
+  FaTrello,
+  FaJira,
+  FaLinux,
+} from "react-icons/fa"
+import {
+  SiSpringboot,
+  SiNextdotjs,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiMongodb,
+  SiPostgresql,
+  SiIntellijidea,
+  SiPostman,
+  SiMysql,
+  SiSwagger,
+} from "react-icons/si"
+import { VscCode } from "react-icons/vsc"
 
-// Technology icons using inline SVGs
 const technologies = [
-  {
-    name: "Java",
-    color: "#e84a00",
-    icon: (
-      <svg viewBox="0 0 48 48" className="w-12 h-12">
-        <path
-          d="M20.59 24.868s-1.926 1.12 1.37 1.5c3.99.455 6.026.39 10.423-.442 0 0 1.156.724 2.768 1.351C27.256 30.914 14.4 27.278 20.59 24.868z"
-          fill="#e84a00"
-        />
-        <path
-          d="M19.316 21.616s-2.16 1.6 1.138 1.943c4.27.44 7.646.476 13.489-.645 0 0 .806.817 2.074 1.264C26.244 26.76 10.69 24.04 19.316 21.616z"
-          fill="#e84a00"
-        />
-        <path
-          d="M28.29 15.46c2.435 2.8-.638 5.317-.638 5.317s6.181-3.194 3.343-7.186C28.436 9.653 26.232 7.79 38.4 1c0 0-12.08 3.014-10.11 14.46z"
-          fill="#e84a00"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Spring Boot",
-    color: "#6db33f",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M20.205 5.207a9.02 9.02 0 0 1-1.752 2.607C16.67 3.517 12.946.533 8.697.533A11.31 11.31 0 0 0 3.37 1.929 11.2 11.2 0 0 0 .58 8.75a11.31 11.31 0 0 0 3.304 8.006A11.2 11.2 0 0 0 8.697 19.78c3.22 0 6.3-1.374 8.458-3.79.67.26 1.37.474 2.078.607a11.31 11.31 0 0 0 2.014.18c.34 0 .68-.016 1.016-.05a9.024 9.024 0 0 1-2.058-11.52z"
-          fill="#6db33f"
-        />
-        <circle cx="21" cy="3" r="2.25" fill="#6db33f" />
-      </svg>
-    ),
-  },
-  {
-    name: "React",
-    color: "#61dafb",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <ellipse
-          cx="12"
-          cy="12"
-          rx="10.5"
-          ry="4.5"
-          stroke="#61dafb"
-          strokeWidth="1.2"
-          fill="none"
-        />
-        <ellipse
-          cx="12"
-          cy="12"
-          rx="10.5"
-          ry="4.5"
-          stroke="#61dafb"
-          strokeWidth="1.2"
-          fill="none"
-          transform="rotate(60 12 12)"
-        />
-        <ellipse
-          cx="12"
-          cy="12"
-          rx="10.5"
-          ry="4.5"
-          stroke="#61dafb"
-          strokeWidth="1.2"
-          fill="none"
-          transform="rotate(120 12 12)"
-        />
-        <circle cx="12" cy="12" r="2" fill="#61dafb" />
-      </svg>
-    ),
-  },
-  {
-    name: "Next.js",
-    color: "#000000",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12 fill-foreground">
-        <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.86-8.292-8.208-9.695a17.424 17.424 0 0 0-2.535-.523 24.26 24.26 0 0 0-2.107-.034z" />
-      </svg>
-    ),
-  },
-  {
-    name: "JavaScript",
-    color: "#f0db4f",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <rect width="24" height="24" fill="#f0db4f" rx="2" />
-        <path
-          d="M22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179z"
-          fill="#323330"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "HTML5",
-    color: "#e44d26",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
-          fill="#e44d26"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "CSS3",
-    color: "#264de4",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.003-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"
-          fill="#264de4"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Git",
-    color: "#f05032",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M23.546 10.93L13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 1 1-1.102 1.059l-2.48-2.48v6.511a1.838 1.838 0 1 1-1.51-.048V9.16a1.838 1.838 0 0 1-.999-2.416l-2.71-2.71-7.16 7.162a1.55 1.55 0 0 0 0 2.188l10.48 10.48a1.55 1.55 0 0 0 2.187 0l10.387-10.388a1.55 1.55 0 0 0 0-2.187"
-          fill="#f05032"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "MongoDB",
-    color: "#47a248",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M17.18 9.52c-1.27-5.58-4.24-7.4-4.56-8.1-.28-.4-.53-.95-.73-1.44-.04.5-.06.98-.17 1.44-.35 1.45-1.74 2.72-2.82 3.97-2.72 3.16-3.03 7.18-1.19 10.7.5.95 1.14 1.79 1.93 2.5l.23 1.57c.06.41.15.82.26 1.22.04.14.08.35.26.38.18.03.27-.14.32-.28.23-.68.44-1.36.63-2.05.06-.22.16-.43.28-.63 1.05.64 2.27.9 3.49.78 5.18-.5 6.96-5.52 4.8-10.74-.42-1.02-1.01-2.06-1.72-3.3z"
-          fill="#47a248"
-        />
-        <path
-          d="M12.5 22.71c-.14-.75-.21-1.52-.36-2.27-.01-.06-.11-.15-.17-.15-.06 0-.14.09-.16.15-.15.73-.23 1.48-.36 2.21l-.02.12c.35.11.71.17 1.08.17l-.01-.23z"
-          fill="#b8c4c2"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "PostgreSQL",
-    color: "#336791",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M17.128 0a10.134 10.134 0 0 0-2.755.403l-.063.02C13.412.174 12.447.001 11.402 0a10.04 10.04 0 0 0-2.694.38C7.13.748 5.774 1.442 4.593 2.47c-1.256 1.093-2.187 2.478-2.801 4.103-.665 1.757-.808 3.62-.808 5.527 0 1.58.088 3.17.376 4.742.288 1.573.744 3.1 1.529 4.479.784 1.378 1.887 2.557 3.359 3.222.736.333 1.572.457 2.405.457.552 0 1.102-.06 1.636-.166l.002-.001c.16-.033.318-.067.475-.104l.001-.002c.02.002.04.002.059.002a2.3 2.3 0 0 0 .816-.164l.006-.003c.328-.128.607-.34.816-.602l.009-.013.007-.01c.212.043.428.078.645.107l.002.001c.41.056.824.08 1.238.08.964 0 1.906-.17 2.78-.466 1.75-.595 3.267-1.78 4.175-3.426.454-.823.76-1.742.872-2.693.112-.951.034-1.938-.194-2.868-.197-.805-.514-1.567-.9-2.278l-.007-.012-.007-.013c-.087-.16-.18-.316-.275-.47 0-.002-.002-.004-.002-.007l-.006-.009-.003-.006a10.67 10.67 0 0 0-.05-.072l-.004-.007c.198-.36.377-.73.532-1.11.508-1.246.759-2.61.759-3.966 0-.54-.038-1.087-.12-1.63-.08-.543-.207-1.086-.394-1.62l-.004-.009-.003-.009a10.084 10.084 0 0 0-1.53-2.903C20.7.863 19.046.079 17.314.01A14.75 14.75 0 0 0 17.128 0z"
-          fill="#336791"
-        />
-        <path
-          d="M19.718 2.408c1.103.682 1.975 1.704 2.537 2.877.151.384.271.783.356 1.186.073.405.101.816.101 1.224 0 1.113-.202 2.227-.597 3.263a9.85 9.85 0 0 1-.61 1.301c-.007.015-.015.032-.024.051-.003.01-.008.019-.012.028-.04.086-.081.172-.123.256-.086.17-.173.339-.264.504l-.006.01a9.32 9.32 0 0 0-.43.923c-.243.595-.41 1.22-.49 1.858-.042.318-.058.64-.05.961.025.321.072.64.142.953.14.627.373 1.228.68 1.786.614 1.114 1.529 2.018 2.658 2.571.177.087.36.166.549.237l.027.01c-.334.457-.753.85-1.242 1.148-.918.56-1.986.846-3.07.846a6.77 6.77 0 0 1-1.126-.095c-.25-.042-.498-.1-.739-.17a2.396 2.396 0 0 0-.24-.086l-.01-.003c.063-.193.114-.391.152-.593.101-.531.113-1.077.036-1.613a5.52 5.52 0 0 0-.438-1.5 5.618 5.618 0 0 0-.908-1.363l-.003-.003-.004-.004a4.69 4.69 0 0 0-.362-.354c.046-.285.078-.573.093-.862.03-.577.003-1.157-.082-1.728a8.894 8.894 0 0 0-.443-1.74l-.007-.017-.007-.018a7.94 7.94 0 0 0-.316-.729l-.003-.006-.003-.005a6.666 6.666 0 0 0-.182-.341v-.005l.007-.006c.156-.13.303-.27.44-.42.273-.302.507-.638.697-1 .19-.364.336-.756.433-1.161.097-.405.144-.823.14-1.24a5.45 5.45 0 0 0-.22-1.397c.174-.046.35-.084.527-.117a9.07 9.07 0 0 1 2.37-.156c1.078.063 2.127.446 2.98 1.09z"
-          fill="#fff"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Python",
-    color: "#3776ab",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.898S0 5.789 0 11.969c0 6.18 3.403 5.96 3.403 5.96h2.032v-2.867s-.109-3.404 3.35-3.404h5.766s3.24.052 3.24-3.13V3.13S18.31 0 11.914 0zm-3.21 1.808a1.044 1.044 0 1 1 0 2.089 1.044 1.044 0 0 1 0-2.089z"
-          fill="#3776ab"
-        />
-        <path
-          d="M12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.007-2.752H12v-.826h8.123S24 18.211 24 12.031c0-6.18-3.403-5.96-3.403-5.96h-2.032v2.867s.109 3.404-3.35 3.404H9.449S6.21 12.29 6.21 15.474v4.398S5.69 24 12.086 24zm3.21-1.808a1.044 1.044 0 1 1 0-2.089 1.044 1.044 0 0 1 0 2.089z"
-          fill="#ffcd3b"
-        />
-      </svg>
-    ),
-  },
-  {
-    name: "Docker",
-    color: "#0db7ed",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-12 h-12">
-        <path
-          d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288z"
-          fill="#0db7ed"
-        />
-      </svg>
-    ),
-  },
+  { name: "Java", color: "#e84a00", icon: FaJava },
+  { name: "Spring Boot", color: "#6db33f", icon: SiSpringboot },
+  { name: "React", color: "#61dafb", icon: FaReact },
+  { name: "Next.js", color: "#000000", icon: SiNextdotjs, useForeground: true },
+  { name: "JavaScript", color: "#f0db4f", icon: SiJavascript },
+  { name: "HTML5", color: "#e44d26", icon: SiHtml5 },
+  { name: "CSS3", color: "#264de4", icon: SiCss },
+  { name: "Git", color: "#f05032", icon: FaGitAlt },
+  { name: "MongoDB", color: "#47a248", icon: SiMongodb },
+  { name: "PostgreSQL", color: "#336791", icon: SiPostgresql },
+  { name: "Python", color: "#3776ab", icon: FaPython },
+  { name: "Docker", color: "#0db7ed", icon: FaDocker },
 ]
 
 const tools = [
-  "VS Code",
-  "IntelliJ IDEA",
-  "Postman",
-  "MySQL Workbench",
-  "GitHub",
-  "Swagger",
-  "Figma",
-  "Trello",
-  "Jira",
-  "Linux",
+  { name: "VS Code", color: "#007ACC", icon: VscCode },
+  { name: "IntelliJ IDEA", color: "#000000", icon: SiIntellijidea, useForeground: true },
+  { name: "Postman", color: "#FF6C37", icon: SiPostman },
+  { name: "MySQL Workbench", color: "#4479A1", icon: SiMysql },
+  { name: "GitHub", color: "#181717", icon: FaGithub, useForeground: true },
+  { name: "Swagger", color: "#85EA2D", icon: SiSwagger },
+  { name: "Figma", color: "#F24E1E", icon: FaFigma },
+  { name: "Trello", color: "#0052CC", icon: FaTrello },
+  { name: "Jira", color: "#0052CC", icon: FaJira },
+  { name: "Linux", color: "#FCC624", icon: FaLinux },
 ]
 
 export function Skills() {
@@ -215,29 +63,37 @@ export function Skills() {
         {/* Section Header */}
         <div className="mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
-            Lenguajes & Tecnologias
+            Lenguajes & Tecnologías
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
         </div>
 
         {/* Technologies Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-16">
-          {technologies.map((tech) => (
-            <Card
-              key={tech.name}
-              className="group border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <div
-                  className="mb-3 p-3 rounded-xl transition-transform group-hover:scale-110"
-                  style={{ backgroundColor: `${tech.color}15` }}
-                >
-                  {tech.icon}
-                </div>
-                <h3 className="font-semibold text-sm">{tech.name}</h3>
-              </CardContent>
-            </Card>
-          ))}
+          {technologies.map((tech, index) => {
+            const Icon = tech.icon
+            return (
+              <Card
+                key={tech.name}
+                className="group border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-fade-in-up"
+                style={{ animationDelay: `${index * 80}ms` }}
+              >
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div
+                    className="mb-3 p-3 rounded-xl transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
+                    style={{ backgroundColor: `${tech.color}15` }}
+                  >
+                    <Icon
+                      size={40}
+                      color={tech.useForeground ? undefined : tech.color}
+                      className={tech.useForeground ? "text-foreground" : ""}
+                    />
+                  </div>
+                  <h3 className="font-semibold text-sm">{tech.name}</h3>
+                </CardContent>
+              </Card>
+            )
+          })}
         </div>
 
         {/* Tools & Frameworks */}
@@ -245,15 +101,26 @@ export function Skills() {
           <h3 className="text-lg font-semibold mb-6 text-muted-foreground uppercase tracking-wide">
             Herramientas & Frameworks
           </h3>
-          <div className="flex flex-wrap gap-3">
-            {tools.map((tool) => (
-              <div
-                key={tool}
-                className="px-4 py-2 bg-card border border-border rounded-lg text-sm font-medium hover:border-primary/30 hover:bg-primary/5 transition-colors cursor-default"
-              >
-                {tool}
-              </div>
-            ))}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {tools.map((tool, index) => {
+              const Icon = tool.icon
+              return (
+                <div
+                  key={tool.name}
+                  className="group flex items-center gap-3 px-4 py-3 bg-card border border-border rounded-lg hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 cursor-default animate-fade-in-up"
+                  style={{ animationDelay: `${index * 80 + 400}ms` }}
+                >
+                  <div className="transition-transform duration-300 group-hover:scale-125 group-hover:-rotate-6">
+                    <Icon
+                      size={24}
+                      color={tool.useForeground ? undefined : tool.color}
+                      className={`${tool.useForeground ? "text-foreground" : ""} transition-transform duration-300`}
+                    />
+                  </div>
+                  <span className="text-sm font-medium">{tool.name}</span>
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
