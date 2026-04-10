@@ -68,7 +68,6 @@ export function Navbar() {
             <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
               D
             </span>
-            <span className="hidden sm:inline">Daniel Guevara</span>
           </Link>
 
           {/* Desktop Navigation */}
