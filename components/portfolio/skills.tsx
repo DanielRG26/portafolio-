@@ -9,7 +9,6 @@ import {
   FaPython,
   FaGithub,
   FaFigma,
-  FaTrello,
   FaJira,
   FaLinux,
 } from "react-icons/fa"
@@ -51,9 +50,8 @@ const tools = [
   { name: "GitHub", color: "#6e40c9", icon: FaGithub },
   { name: "Swagger", color: "#85EA2D", icon: SiSwagger },
   { name: "Figma", color: "#F24E1E", icon: FaFigma },
-  { name: "Trello", color: "#0052CC", icon: FaTrello },
-  { name: "Jira", color: "#0052CC", icon: FaJira },
   { name: "Linux", color: "#FCC624", icon: FaLinux },
+  { name: "Jira", color: "#0052CC", icon: FaJira },
 ]
 
 export function Skills() {
@@ -134,25 +132,7 @@ export function Skills() {
                   </div>
 
                   {/* Name */}
-                  <h3 className="font-semibold text-sm mb-3 relative">{tech.name}</h3>
-
-                  {/* Skill level bar */}
-                  <div className="w-full h-1.5 bg-muted rounded-full overflow-hidden relative">
-                    <div
-                      className="h-full rounded-full transition-all duration-1000 ease-out"
-                      style={{
-                        width: isHovered ? `${tech.level}%` : "0%",
-                        backgroundColor: tech.color,
-                        boxShadow: isHovered ? `0 0 8px ${tech.color}60` : "none",
-                      }}
-                    />
-                  </div>
-                  <span
-                    className="text-xs mt-1.5 font-mono transition-all duration-300"
-                    style={{ color: isHovered ? tech.color : "var(--muted-foreground)", opacity: isHovered ? 1 : 0 }}
-                  >
-                    {tech.level}%
-                  </span>
+                  <h3 className="font-semibold text-sm relative">{tech.name}</h3>
                 </div>
               </div>
             )
@@ -167,7 +147,7 @@ export function Skills() {
             <span className="h-px flex-1 bg-border" />
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {tools.map((tool, index) => {
               const Icon = tool.icon
               return (
