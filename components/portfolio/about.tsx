@@ -37,6 +37,7 @@ const personalInfo = [
   { icon: BookOpen, label: "Semestre", value: "5to Semestre" },
   { icon: Calendar, label: "Nacimiento", value: "26/02/2006" },
   { icon: Languages, label: "Idiomas", value: "Español (Nativo), Ingles (Basico)" },
+  { icon: GraduationCap, label: "Universidad", value: "Universidad Cooperativa de Colombia" },
 ]
 
 const interests = [

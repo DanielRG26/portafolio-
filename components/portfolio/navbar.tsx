@@ -20,24 +20,41 @@ const navLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState("#inicio")
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
+
+      // Detect active section
+      const sections = navLinks.map((l) => l.href.replace("#", ""))
+      let current = sections[0]
+      for (const id of sections) {
+        const el = document.getElementById(id)
+        if (el) {
+          const rect = el.getBoundingClientRect()
+          if (rect.top <= 120) {
+            current = id
+          }
+        }
+      }
+      setActiveSection(`#${current}`)
     }
-    window.addEventListener("scroll", handleScroll)
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
+          ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-background/20"
           : "bg-transparent"
       )}
     >
@@ -46,22 +63,36 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="#inicio"
-            className="font-mono text-lg font-bold text-primary hover:text-primary/80 transition-colors"
+            className="group flex items-center gap-2 font-mono text-lg font-bold text-primary hover:text-primary/80 transition-all duration-300"
           >
-            Daniel Guevara
+            <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+              D
+            </span>
+            <span className="hidden sm:inline">Daniel Guevara</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-secondary"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center gap-0.5 bg-secondary/50 rounded-full px-1.5 py-1 border border-border/50">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "relative px-3.5 py-1.5 text-sm font-medium rounded-full transition-all duration-300",
+                    isActive
+                      ? "text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  {isActive && (
+                    <span className="absolute inset-0 bg-primary rounded-full shadow-md shadow-primary/25 animate-nav-pill" />
+                  )}
+                  <span className="relative z-10">{link.label}</span>
+                </Link>
+              )
+            })}
           </div>
 
           {/* Actions */}
@@ -71,7 +102,7 @@ export function Navbar() {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="text-muted-foreground"
+                className="text-muted-foreground hover:text-foreground rounded-full transition-all duration-300 hover:bg-secondary hover:rotate-180"
               >
                 {theme === "dark" ? (
                   <Sun className="h-5 w-5" />
@@ -85,7 +116,7 @@ export function Navbar() {
             <Button
               variant="default"
               size="sm"
-              className="hidden sm:flex items-center gap-2"
+              className="hidden sm:flex items-center gap-2 rounded-full shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
               asChild
             >
               <a href="/CV_Daniel_Guevara.pdf" download>
@@ -98,33 +129,68 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="md:hidden rounded-full"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              <div className="relative w-5 h-5">
+                <span
+                  className={cn(
+                    "absolute left-0 w-5 h-0.5 bg-current rounded-full transition-all duration-300",
+                    isOpen ? "top-2.5 rotate-45" : "top-1"
+                  )}
+                />
+                <span
+                  className={cn(
+                    "absolute left-0 top-2.5 w-5 h-0.5 bg-current rounded-full transition-all duration-300",
+                    isOpen ? "opacity-0 scale-0" : "opacity-100"
+                  )}
+                />
+                <span
+                  className={cn(
+                    "absolute left-0 w-5 h-0.5 bg-current rounded-full transition-all duration-300",
+                    isOpen ? "top-2.5 -rotate-45" : "top-4"
+                  )}
+                />
+              </div>
               <span className="sr-only">Menu</span>
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+        <div
+          className={cn(
+            "md:hidden overflow-hidden transition-all duration-500 ease-in-out",
+            isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          )}
+        >
+          <div className="py-4 border-t border-border/50">
             <div className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-secondary rounded-md transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link, index) => {
+                const isActive = activeSection === link.href
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300",
+                      isActive
+                        ? "text-primary bg-primary/10 border-l-2 border-primary"
+                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    )}
+                    style={{
+                      transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
+                    }}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
               <Button
                 variant="default"
                 size="sm"
-                className="mt-4 mx-4 flex items-center gap-2"
+                className="mt-4 mx-4 flex items-center gap-2 rounded-full"
                 asChild
               >
                 <a href="/CV_Daniel_Guevara.pdf" download>
@@ -134,7 +200,7 @@ export function Navbar() {
               </Button>
             </div>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   )
