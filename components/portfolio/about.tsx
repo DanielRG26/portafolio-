@@ -7,8 +7,8 @@ import { Badge } from "@/components/ui/badge"
 const highlights = [
   {
     icon: Code2,
-    title: "Full-Stack",
-    description: "Desarrollo web completo con Java, Spring Boot, React y Next.js",
+    title: "Desarrollo Web",
+    description: "Aprendiendo desarrollo web con Java, Spring Boot, React y Next.js",
     color: "#3b82f6",
   },
   {
@@ -78,8 +78,8 @@ export function About() {
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
                   Soy estudiante de{" "}
                   <strong className="text-primary">Ingenieria de Software</strong> en la
-                  Universidad Cooperativa de Colombia sede Pasto. Me especializo en desarrollo
-                  web full-stack con enfoque en arquitectura limpia y patrones de diseño.
+                  Universidad Cooperativa de Colombia sede Pasto. Estoy aprendiendo desarrollo
+                  web con enfoque en buenas practicas y patrones de diseño.
                 </p>
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                   Me apasiona el trabajo en equipo con metodologias agiles, el uso de{" "}

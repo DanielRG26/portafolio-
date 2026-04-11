@@ -46,7 +46,7 @@ const projects = [
       "Sistema educativo completo con roles de usuario, control academico y gestion de cursos.",
     tags: ["Java", "Spring Boot", "MySQL"],
     github: "https://github.com/Goloso0006/education-system.git",
-    category: "FULL-STACK",
+    category: "BACKEND",
     categoryColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
   },
   {

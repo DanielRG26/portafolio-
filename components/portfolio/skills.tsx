@@ -71,7 +71,7 @@ export function Skills() {
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
-            Tecnologías que domino y uso en mis proyectos
+            Tecnologías que he aprendido y uso en mis proyectos
           </p>
         </div>
 

@@ -15,8 +15,8 @@ const educationItems = [
     current: true,
     color: "#3b82f6",
     description:
-      "Enfoque en desarrollo web full-stack, arquitectura de software y metodologias agiles. Participacion activa en proyectos colaborativos aplicando patrones de diseño y buenas practicas.",
-    highlights: ["Desarrollo Full-Stack", "Arquitectura MVC", "Metodologias Agiles", "GitFlow"],
+      "Enfoque en desarrollo web, arquitectura de software y metodologias agiles. Participacion activa en proyectos colaborativos aplicando patrones de diseño y buenas practicas.",
+    highlights: ["Desarrollo Web", "Arquitectura MVC", "Metodologias Agiles", "GitFlow"],
   },
   {
     icon: BookOpen,
