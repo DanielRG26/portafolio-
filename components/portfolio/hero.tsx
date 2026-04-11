@@ -22,11 +22,11 @@ export function Hero() {
     let timeout: NodeJS.Timeout
 
     if (!isDeleting && displayed.length < current.length) {
-      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 60)
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 45)
     } else if (!isDeleting && displayed.length === current.length) {
-      timeout = setTimeout(() => setIsDeleting(true), 2500)
+      timeout = setTimeout(() => setIsDeleting(true), 2000)
     } else if (isDeleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), 35)
+      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length - 1)), 25)
     } else if (isDeleting && displayed.length === 0) {
       setIsDeleting(false)
       setRoleIndex((prev) => (prev + 1) % roles.length)
@@ -43,108 +43,97 @@ export function Hero() {
       {/* Background decorations */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float-delayed" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/3 rounded-full blur-3xl animate-pulse-slow" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="animate-slide-in-left">
-              <Badge variant="secondary" className="mb-6 gap-2 animate-bounce-in" style={{ animationDelay: "400ms" }}>
+              <Badge variant="secondary" className="mb-6 gap-2">
                 <Sparkles className="h-3 w-3 animate-spin-slow" />
                 Disponible para proyectos
               </Badge>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-balance">
-              <span className="text-primary inline-block animate-slide-in-left" style={{ animationDelay: "200ms" }}>
+              <span className="text-primary inline-block animate-slide-in-left" style={{ animationDelay: "80ms" }}>
                 Daniel Felipe
               </span>
               <br />
-              <span className="text-foreground inline-block animate-slide-in-left" style={{ animationDelay: "400ms" }}>
+              <span className="text-foreground inline-block animate-slide-in-left" style={{ animationDelay: "160ms" }}>
                 Guevara Rodriguez
               </span>
             </h1>
 
             {/* Typing effect subtitle */}
-            <div
-              className="text-xl sm:text-2xl text-muted-foreground font-medium mb-6 h-9 animate-fade-in-up"
-              style={{ animationDelay: "600ms" }}
-            >
+            <div className="text-xl sm:text-2xl text-muted-foreground font-medium mb-6 h-9 animate-fade-in-up" style={{ animationDelay: "250ms" }}>
               <span>{displayed}</span>
               <span className="inline-block w-0.5 h-6 sm:h-7 bg-primary ml-1 animate-blink align-middle" />
             </div>
 
             {/* Info badges */}
-            <div
-              className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 text-sm text-muted-foreground"
-            >
-              <span className="flex items-center gap-1.5 animate-fade-in-up" style={{ animationDelay: "800ms" }}>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 text-sm text-muted-foreground animate-fade-in-up" style={{ animationDelay: "350ms" }}>
+              <span className="flex items-center gap-1.5">
                 <MapPin className="h-4 w-4 text-primary" />
                 Pasto, Nariño
               </span>
-              <span className="flex items-center gap-1.5 animate-fade-in-up" style={{ animationDelay: "900ms" }}>
+              <span className="flex items-center gap-1.5">
                 <GraduationCap className="h-4 w-4 text-primary" />
                 Universidad Cooperativa de Colombia - 5to Semestre
               </span>
-              <span className="flex items-center gap-1.5 animate-fade-in-up" style={{ animationDelay: "1000ms" }}>
+              <span className="flex items-center gap-1.5">
                 <Calendar className="h-4 w-4 text-primary" />
                 2024 - Presente
               </span>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-              <div className="animate-fade-in-up" style={{ animationDelay: "1100ms" }}>
-                <Button asChild size="lg" className="shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:scale-105">
-                  <a href="#proyectos">Ver proyectos</a>
-                </Button>
-              </div>
-              <div className="animate-fade-in-up" style={{ animationDelay: "1200ms" }}>
-                <Button variant="outline" size="lg" asChild className="hover:-translate-y-1 hover:scale-105 transition-all duration-300">
-                  <a href="#contacto">Contactar</a>
-                </Button>
-              </div>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: "450ms" }}>
+              <Button asChild size="lg" className="shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:scale-105">
+                <a href="#proyectos">Ver proyectos</a>
+              </Button>
+              <Button variant="outline" size="lg" asChild className="hover:-translate-y-1 hover:scale-105 transition-all duration-300">
+                <a href="#contacto">Contactar</a>
+              </Button>
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center lg:justify-start gap-3">
+            <div className="flex justify-center lg:justify-start gap-3 animate-fade-in-up" style={{ animationDelay: "550ms" }}>
               {[
-                { href: "https://github.com/DanielRG26", icon: Github, label: "GitHub", delay: 1300 },
-                { href: "https://www.linkedin.com/in/daniel-felipe-guevara-rodriguez-3b7586208", icon: Linkedin, label: "LinkedIn", delay: 1400 },
-                { href: "mailto:guevararodriguezdanielfelipe@gmail.com", icon: Mail, label: "Email", delay: 1500 },
+                { href: "https://github.com/DanielRG26", icon: Github, label: "GitHub" },
+                { href: "https://www.linkedin.com/in/daniel-felipe-guevara-rodriguez-3b7586208", icon: Linkedin, label: "LinkedIn" },
+                { href: "mailto:guevararodriguezdanielfelipe@gmail.com", icon: Mail, label: "Email" },
               ].map((social) => (
-                <div key={social.label} className="animate-bounce-in" style={{ animationDelay: `${social.delay}ms` }}>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:scale-110 transition-all duration-300"
-                    asChild
+                <Button
+                  key={social.label}
+                  variant="outline"
+                  size="icon"
+                  className="hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:scale-110 transition-all duration-300"
+                  asChild
+                >
+                  <a
+                    href={social.href}
+                    target={social.href.startsWith("http") ? "_blank" : undefined}
+                    rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    aria-label={social.label}
                   >
-                    <a
-                      href={social.href}
-                      target={social.href.startsWith("http") ? "_blank" : undefined}
-                      rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      aria-label={social.label}
-                    >
-                      <social.icon className="h-5 w-5" />
-                    </a>
-                  </Button>
-                </div>
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                </Button>
               ))}
             </div>
           </div>
 
           {/* Photo */}
-          <div className="flex justify-center lg:order-2 animate-scale-in" style={{ animationDelay: "300ms" }}>
+          <div className="flex justify-center lg:order-2 animate-scale-in" style={{ animationDelay: "150ms" }}>
             <div className="relative group">
               {/* Orbiting ring */}
               <div className="absolute -inset-6 rounded-full border-2 border-dashed border-primary/15 animate-spin-very-slow" />
               {/* Static ring */}
-              <div className="absolute -inset-3 rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-all duration-700 group-hover:scale-105" />
+              <div className="absolute -inset-3 rounded-full border-2 border-primary/20 group-hover:border-primary/40 transition-all duration-500 group-hover:scale-105" />
 
               {/* Glow behind photo */}
-              <div className="absolute inset-0 rounded-full bg-primary/10 blur-2xl scale-125 opacity-50 group-hover:opacity-80 transition-opacity duration-700 animate-pulse-slow" />
+              <div className="absolute inset-0 rounded-full bg-primary/10 blur-2xl scale-125 opacity-50 group-hover:opacity-80 transition-opacity duration-500 animate-pulse-slow" />
 
               {/* Status indicator */}
               <div className="absolute -top-2 -right-2 z-10">
@@ -154,18 +143,17 @@ export function Hero() {
                 </span>
               </div>
 
-              {/* Floating dots around photo */}
+              {/* Floating dots */}
               <div className="absolute -top-4 left-1/4 w-2 h-2 rounded-full bg-primary/40 animate-float" />
               <div className="absolute -bottom-3 right-1/4 w-1.5 h-1.5 rounded-full bg-accent/40 animate-float-delayed" />
-              <div className="absolute top-1/2 -left-4 w-1.5 h-1.5 rounded-full bg-primary/30 animate-float" style={{ animationDelay: "1s" }} />
 
               {/* Photo container */}
-              <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-background shadow-2xl group-hover:shadow-primary/25 transition-all duration-700">
+              <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-background shadow-2xl group-hover:shadow-primary/25 transition-all duration-500">
                 <Image
                   src="/images/profile.jpeg"
                   alt="Daniel Felipe Guevara Rodriguez"
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   priority
                 />
               </div>
