@@ -49,6 +49,15 @@ const projects = [
     category: "FULL-STACK",
     categoryColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
   },
+  {
+    title: "Memoria Virtual",
+    description:
+      "Entorno 3D interactivo desarrollado con React y Three.js, aplicando programacion orientada a objetos y arquitectura modular escalable.",
+    tags: ["React", "Three.js", "JavaScript", "Vite"],
+    github: "https://github.com/DanielRG26/MemoriaVirtual.git",
+    category: "3D / INTERACTIVO",
+    categoryColor: "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400",
+  },
 ]
 
 export function Projects() {
