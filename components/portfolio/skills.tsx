@@ -28,18 +28,18 @@ import {
 import { VscCode } from "react-icons/vsc"
 
 const technologies = [
-  { name: "Java", color: "#e84a00", icon: FaJava, level: 90 },
-  { name: "Spring Boot", color: "#6db33f", icon: SiSpringboot, level: 85 },
-  { name: "React", color: "#61dafb", icon: FaReact, level: 80 },
-  { name: "Next.js", color: "#000000", icon: SiNextdotjs, useForeground: true, level: 75 },
-  { name: "JavaScript", color: "#f0db4f", icon: SiJavascript, level: 88 },
-  { name: "HTML5", color: "#e44d26", icon: SiHtml5, level: 95 },
-  { name: "CSS3", color: "#264de4", icon: SiCss, level: 90 },
-  { name: "Git", color: "#f05032", icon: FaGitAlt, level: 85 },
-  { name: "MongoDB", color: "#47a248", icon: SiMongodb, level: 78 },
-  { name: "PostgreSQL", color: "#336791", icon: SiPostgresql, level: 80 },
-  { name: "Python", color: "#3776ab", icon: FaPython, level: 70 },
-  { name: "Docker", color: "#0db7ed", icon: FaDocker, level: 65 },
+  { name: "Java", color: "#e84a00", icon: FaJava, level: 90, repo: "https://github.com/DanielRG26/vehuculos_Final" },
+  { name: "Spring Boot", color: "#6db33f", icon: SiSpringboot, level: 85, repo: "https://github.com/DanielRG26/Proyecto-de-dise-o" },
+  { name: "React", color: "#61dafb", icon: FaReact, level: 80, repo: "https://github.com/DanielRG26/coffeeShop_2" },
+  { name: "Next.js", color: "#000000", icon: SiNextdotjs, useForeground: true, level: 75, repo: "https://github.com/DanielRG26/portafolio-" },
+  { name: "JavaScript", color: "#f0db4f", icon: SiJavascript, level: 88, repo: "https://github.com/DanielRG26/Calculadora-2.0" },
+  { name: "HTML5", color: "#e44d26", icon: SiHtml5, level: 95, repo: "https://github.com/DanielRG26/dise-o_login-" },
+  { name: "CSS3", color: "#264de4", icon: SiCss, level: 90, repo: "https://github.com/DanielRG26/dise-o_login-" },
+  { name: "Git", color: "#f05032", icon: FaGitAlt, level: 85, repo: "https://github.com/DanielRG26" },
+  { name: "MongoDB", color: "#47a248", icon: SiMongodb, level: 78, repo: "https://github.com/DanielRG26/vehuculos_Final" },
+  { name: "PostgreSQL", color: "#336791", icon: SiPostgresql, level: 80, repo: "https://github.com/Goloso0006/education-system" },
+  { name: "Python", color: "#3776ab", icon: FaPython, level: 70, repo: "https://github.com/DanielRG26" },
+  { name: "Docker", color: "#0db7ed", icon: FaDocker, level: 65, repo: "https://github.com/DanielRG26" },
 ]
 
 const tools = [
@@ -88,8 +88,11 @@ export function Skills() {
                 onMouseEnter={() => setHoveredTech(tech.name)}
                 onMouseLeave={() => setHoveredTech(null)}
               >
-                <div
-                  className="group relative rounded-2xl border border-border/50 bg-card p-5 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 cursor-default overflow-hidden"
+                <a
+                  href={tech.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative rounded-2xl border border-border/50 bg-card p-5 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden block no-underline"
                   style={{
                     borderColor: isHovered ? `${tech.color}60` : undefined,
                     boxShadow: isHovered ? `0 8px 30px ${tech.color}20, 0 0 0 1px ${tech.color}30` : undefined,
@@ -133,7 +136,7 @@ export function Skills() {
 
                   {/* Name */}
                   <h3 className="font-semibold text-sm relative">{tech.name}</h3>
-                </div>
+                </a>
               </div>
             )
           })}
