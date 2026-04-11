@@ -36,11 +36,11 @@ const technologies = [
   { name: "JavaScript", color: "#f0db4f", icon: SiJavascript, level: 88, repo: "https://github.com/DanielRG26/Calculadora-2.0" },
   { name: "HTML", color: "#e44d26", icon: SiHtml5, level: 95, repo: "https://github.com/edben110/landing-page" },
   { name: "CSS", color: "#264de4", icon: SiCss, level: 90, repo: "https://github.com/DanielRG26/dise-o_login-" },
-  { name: "Git", color: "#f05032", icon: FaGitAlt, level: 85, repo: "https://github.com/DanielRG26?tab=repositories" },
-  { name: "MongoDB", color: "#47a248", icon: SiMongodb, level: 78, repo: "https://github.com/DanielRG26/vehuculos_Final" },
-  { name: "PostgreSQL", color: "#336791", icon: SiPostgresql, level: 80, repo: "https://github.com/Goloso0006/education-system" },
-  { name: "Python", color: "#3776ab", icon: FaPython, level: 70, repo: "https://github.com/DanielRG26/Proyecto_Escolar" },
-  { name: "Docker", color: "#0db7ed", icon: FaDocker, level: 65, repo: "https://github.com/DanielRG26?tab=repositories" },
+  { name: "Git", color: "#f05032", icon: FaGitAlt, level: 85, repo: null },
+  { name: "MongoDB", color: "#47a248", icon: SiMongodb, level: 78, repo: null },
+  { name: "PostgreSQL", color: "#336791", icon: SiPostgresql, level: 80, repo: null },
+  { name: "Python", color: "#3776ab", icon: FaPython, level: 70, repo: null },
+  { name: "Docker", color: "#0db7ed", icon: FaDocker, level: 65, repo: null },
 ]
 
 const tools = [
@@ -90,55 +90,31 @@ export function Skills() {
                 onMouseEnter={() => setHoveredTech(tech.name)}
                 onMouseLeave={() => setHoveredTech(null)}
               >
-                <a
-                  href={tech.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative rounded-2xl border border-border/50 bg-card p-5 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 cursor-pointer overflow-hidden block no-underline"
-                  style={{
+                {(() => {
+                  const cls = `group relative rounded-2xl border border-border/50 bg-card p-5 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 overflow-hidden block no-underline ${tech.repo ? "cursor-pointer" : "cursor-default"}`
+                  const sty = {
                     borderColor: isHovered ? `${tech.color}60` : undefined,
                     boxShadow: isHovered ? `0 8px 30px ${tech.color}20, 0 0 0 1px ${tech.color}30` : undefined,
-                  }}
-                >
-                  {/* Colored top accent bar */}
-                  <div
-                    className="absolute top-0 left-0 right-0 h-1 transition-all duration-500 origin-left"
-                    style={{
-                      backgroundColor: tech.color,
-                      transform: isHovered ? "scaleX(1)" : "scaleX(0)",
-                    }}
-                  />
-
-                  {/* Background glow on hover */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
-                    style={{
-                      background: `radial-gradient(circle at 50% 30%, ${tech.color}10 0%, transparent 70%)`,
-                    }}
-                  />
-
-                  {/* Icon container */}
-                  <div className="relative mb-4">
-                    {/* Glow ring behind icon */}
-                    <div
-                      className="absolute inset-0 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-all duration-500 scale-150"
-                      style={{ backgroundColor: tech.color }}
-                    />
-                    <div
-                      className="relative p-3 rounded-xl transition-all duration-500 group-hover:scale-110"
-                      style={{ backgroundColor: `${tech.color}12` }}
-                    >
-                      <Icon
-                        size={40}
-                        color={tech.useForeground ? undefined : tech.color}
-                        className={`${tech.useForeground ? "text-foreground" : ""} transition-transform duration-500 group-hover:rotate-6`}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Name */}
-                  <h3 className="font-semibold text-sm relative">{tech.name}</h3>
-                </a>
+                  }
+                  const inner = (
+                    <>
+                      <div className="absolute top-0 left-0 right-0 h-1 transition-all duration-500 origin-left" style={{ backgroundColor: tech.color, transform: isHovered ? "scaleX(1)" : "scaleX(0)" }} />
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" style={{ background: `radial-gradient(circle at 50% 30%, ${tech.color}10 0%, transparent 70%)` }} />
+                      <div className="relative mb-4">
+                        <div className="absolute inset-0 rounded-xl blur-md opacity-0 group-hover:opacity-40 transition-all duration-500 scale-150" style={{ backgroundColor: tech.color }} />
+                        <div className="relative p-3 rounded-xl transition-all duration-500 group-hover:scale-110" style={{ backgroundColor: `${tech.color}12` }}>
+                          <Icon size={40} color={tech.useForeground ? undefined : tech.color} className={`${tech.useForeground ? "text-foreground" : ""} transition-transform duration-500 group-hover:rotate-6`} />
+                        </div>
+                      </div>
+                      <h3 className="font-semibold text-sm relative">{tech.name}</h3>
+                    </>
+                  )
+                  return tech.repo ? (
+                    <a href={tech.repo} target="_blank" rel="noopener noreferrer" className={cls} style={sty}>{inner}</a>
+                  ) : (
+                    <div className={cls} style={sty}>{inner}</div>
+                  )
+                })()}
               </div>
             )
           })}
