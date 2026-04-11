@@ -127,6 +127,13 @@
   }
 }
 
+/* Custom cursor - hide native on non-touch */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
 @keyframes fade-in-up {
   0% {
     opacity: 0;
