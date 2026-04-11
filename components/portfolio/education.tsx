@@ -60,7 +60,7 @@ export function Education() {
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto mb-16">
           {/* Vertical line - animated gradient */}
-          <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-border" />
+          <div className="absolute left-5 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-border" />
 
           <div className="space-y-10">
             {educationItems.map((item, index) => {
@@ -68,7 +68,7 @@ export function Education() {
               return (
                 <div
                   key={index}
-                  className="relative pl-16 sm:pl-24 animate-fade-in-up"
+                  className="relative pl-14 sm:pl-24 animate-fade-in-up"
                   style={{ animationDelay: `${200 + index * 200}ms` }}
                 >
                   {/* Timeline node */}
@@ -82,7 +82,7 @@ export function Education() {
                         />
                       )}
                       <div
-                        className="relative w-12 h-12 rounded-full border-4 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110"
+                        className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full border-4 flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110"
                         style={{
                           backgroundColor: item.current ? item.color : "var(--background)",
                           borderColor: item.current ? item.color : "var(--border)",
@@ -117,14 +117,14 @@ export function Education() {
                       }}
                     />
 
-                    <CardContent className="p-6 relative">
+                    <CardContent className="p-4 sm:p-6 relative">
                       {/* Header */}
-                      <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
+                      <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
                         <div>
-                          <h3 className="text-xl font-bold text-foreground mb-1">{item.title}</h3>
-                          <p className="text-muted-foreground font-medium">{item.institution}</p>
+                          <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">{item.title}</h3>
+                          <p className="text-sm sm:text-base text-muted-foreground font-medium">{item.institution}</p>
                         </div>
-                        <div className="flex flex-col items-end gap-2">
+                        <div className="flex flex-wrap items-center gap-2 sm:flex-col sm:items-end">
                           <Badge
                             className="font-mono"
                             style={{

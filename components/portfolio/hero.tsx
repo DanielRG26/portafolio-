@@ -27,7 +27,7 @@ export function Hero() {
             </div>
 
             <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-balance animate-fade-in-up"
+              className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-balance animate-fade-in-up"
               style={{ animationDelay: "150ms" }}
             >
               <span className="text-primary">Daniel Felipe</span>

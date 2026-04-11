@@ -202,7 +202,7 @@ export function About() {
               Intereses
               <span className="h-px flex-1 bg-border" />
             </h3>
-            <Card className="border-border/50 h-[calc(100%-2.75rem)]">
+            <Card className="border-border/50">
               <CardContent className="p-6 flex flex-wrap gap-2 content-start">
                 {interests.map((interest, index) => (
                   <Badge

@@ -66,7 +66,7 @@ export function Skills() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <div className="mb-16 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
             Lenguajes & Tecnologías
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />

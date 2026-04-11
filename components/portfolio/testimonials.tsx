@@ -82,10 +82,10 @@ export function Testimonials() {
         <div className="max-w-4xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
           <Card className="border-primary/20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden shadow-xl relative">
             {/* Large decorative quote */}
-            <Quote className="absolute top-6 left-6 h-16 w-16 text-primary/10" />
-            <Quote className="absolute bottom-6 right-6 h-16 w-16 text-primary/10 rotate-180" />
+            <Quote className="absolute top-4 left-4 h-10 w-10 sm:h-16 sm:w-16 text-primary/10" />
+            <Quote className="absolute bottom-4 right-4 h-10 w-10 sm:h-16 sm:w-16 text-primary/10 rotate-180" />
 
-            <CardContent className="p-8 sm:p-12">
+            <CardContent className="p-5 sm:p-8 md:p-12">
               <div
                 className={`flex flex-col items-center text-center transition-all duration-300 ${
                   isAnimating ? "opacity-0 translate-y-4" : "opacity-100 translate-y-0"
@@ -119,7 +119,7 @@ export function Testimonials() {
                 </div>
 
                 {/* Quote text */}
-                <blockquote className="text-lg sm:text-xl leading-relaxed text-foreground/90 mb-8 max-w-2xl italic">
+                <blockquote className="text-base sm:text-lg md:text-xl leading-relaxed text-foreground/90 mb-8 max-w-2xl italic">
                   &ldquo;{current.content}&rdquo;
                 </blockquote>
 
@@ -173,7 +173,7 @@ export function Testimonials() {
         </div>
 
         {/* Mini avatar cards - clickable */}
-        <div className="flex justify-center gap-6 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
+        <div className="flex justify-center gap-4 sm:gap-6 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
           {testimonials.map((t, i) => (
             <button
               key={t.id}
@@ -184,7 +184,7 @@ export function Testimonials() {
               aria-label={`Ver testimonio de ${t.name}`}
             >
               <div
-                className={`w-16 h-16 rounded-full overflow-hidden border-2 transition-all duration-500 shadow-md ${
+                className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 transition-all duration-500 shadow-md ${
                   i === active
                     ? "border-primary shadow-lg shadow-primary/20"
                     : "border-border group-hover:border-primary/40"

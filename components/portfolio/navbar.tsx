@@ -71,7 +71,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-0.5 bg-secondary/50 rounded-full px-1.5 py-1 border border-border/50">
+          <div className="hidden lg:flex items-center gap-0.5 bg-secondary/50 rounded-full px-1.5 py-1 border border-border/50">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href
               return (
@@ -128,7 +128,7 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden rounded-full"
+              className="lg:hidden rounded-full"
               onClick={() => setIsOpen(!isOpen)}
             >
               <div className="relative w-5 h-5">
@@ -159,7 +159,7 @@ export function Navbar() {
         {/* Mobile Navigation */}
         <div
           className={cn(
-            "md:hidden overflow-hidden transition-all duration-500 ease-in-out",
+            "lg:hidden overflow-hidden transition-all duration-500 ease-in-out",
             isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           )}
         >

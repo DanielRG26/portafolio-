@@ -151,7 +151,7 @@ export function Contact() {
                             className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
                           />
                         </div>
-                        <p className="text-sm font-medium text-foreground/80 break-all mb-1">
+                        <p className="text-sm font-medium text-foreground/80 break-all leading-tight mb-1">
                           {method.value}
                         </p>
                         <p className="text-xs text-muted-foreground">
@@ -167,7 +167,7 @@ export function Contact() {
         </div>
 
         {/* Bottom row: location + social */}
-        <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {/* Location */}
           <Card
             className="group border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
