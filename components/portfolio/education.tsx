@@ -195,7 +195,7 @@ export function Education() {
             const Icon = stat.icon
             return (
               <div
-                key={stat.label}
+                key={stat.labelKey}
                 className="group animate-fade-in-up"
                 style={{ animationDelay: `${600 + index * 100}ms` }}
               >
