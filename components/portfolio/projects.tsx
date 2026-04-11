@@ -1,7 +1,10 @@
+"use client"
+
 import { Github, ExternalLink } from "lucide-react"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { useTranslations } from "next-intl"
 
 const projects = [
   {
@@ -61,6 +64,7 @@ const projects = [
 ]
 
 export function Projects() {
+  const t = useTranslations("projects")
   return (
     <section id="proyectos" className="py-20 bg-secondary/30 relative overflow-hidden">
       {/* Background */}
@@ -71,11 +75,11 @@ export function Projects() {
         {/* Section Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
-            Proyectos Destacados
+            {t("titulo")}
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
-            Algunos de los proyectos en los que he trabajado
+            {t("subtitulo")}
           </p>
         </div>
 
@@ -93,7 +97,7 @@ export function Projects() {
                   {project.category}
                 </Badge>
                 <span className="text-muted-foreground text-sm font-mono">
-                  {"[ preview / captura ]"}
+                  {t("preview")}
                 </span>
               </div>
 
@@ -129,7 +133,7 @@ export function Projects() {
                       className="flex items-center gap-2"
                     >
                       <Github className="h-4 w-4" />
-                      Ver en GitHub
+                      {t("verGithub")}
                     </a>
                   </Button>
                 </div>
@@ -148,7 +152,7 @@ export function Projects() {
               className="flex items-center gap-2"
             >
               <Github className="h-4 w-4" />
-              Ver mas proyectos en GitHub
+              {t("verMas")}
             </a>
           </Button>
         </div>

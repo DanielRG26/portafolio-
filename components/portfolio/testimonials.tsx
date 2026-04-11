@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { useTranslations } from "next-intl"
 
 const testimonials = [
   {
@@ -59,6 +60,7 @@ export function Testimonials() {
   }
 
   const current = testimonials[active]
+  const t = useTranslations("testimonials")
 
   return (
     <section id="testimonios" className="py-20 bg-background relative overflow-hidden">
@@ -70,11 +72,11 @@ export function Testimonials() {
         {/* Section Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
-            Testimonios
+            {t("titulo")}
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
-            Lo que dicen colegas y clientes sobre mi trabajo
+            {t("subtitulo")}
           </p>
         </div>
 
@@ -137,7 +139,7 @@ export function Testimonials() {
                   size="icon"
                   className="rounded-full border-primary/20 hover:bg-primary/10 hover:border-primary/40 transition-all"
                   onClick={() => goTo((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-                  aria-label="Testimonio anterior"
+                  aria-label={t("anterior")}
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </Button>
@@ -163,7 +165,7 @@ export function Testimonials() {
                   size="icon"
                   className="rounded-full border-primary/20 hover:bg-primary/10 hover:border-primary/40 transition-all"
                   onClick={() => goTo((prev) => (prev + 1) % testimonials.length)}
-                  aria-label="Siguiente testimonio"
+                  aria-label={t("siguiente")}
                 >
                   <ChevronRight className="h-5 w-5" />
                 </Button>

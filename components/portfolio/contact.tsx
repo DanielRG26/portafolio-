@@ -4,45 +4,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, MessageCircle, ArrowUpRight } fr
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { FaWhatsapp } from "react-icons/fa"
-
-const contactMethods = [
-  {
-    icon: FaWhatsapp,
-    label: "WhatsApp",
-    value: "+57 323 427 7975",
-    description: "Respuesta rapida, escríbeme directo",
-    href: "https://wa.me/573234277975?text=Hola%20Daniel,%20me%20gustaria%20contactarte",
-    color: "#25D366",
-    primary: true,
-  },
-  {
-    icon: Mail,
-    label: "Email Principal",
-    value: "guevararodriguezdanielfelipe@gmail.com",
-    description: "Para propuestas y colaboraciones",
-    href: "mailto:guevararodriguezdanielfelipe@gmail.com",
-    color: "#3b82f6",
-    primary: false,
-  },
-  {
-    icon: Mail,
-    label: "Email Secundario",
-    value: "grdfelipe@icloud.com",
-    description: "Contacto alternativo",
-    href: "mailto:grdfelipe@icloud.com",
-    color: "#8b5cf6",
-    primary: false,
-  },
-  {
-    icon: Phone,
-    label: "Telefono",
-    value: "+57 323 427 7975",
-    description: "Llamadas y mensajes",
-    href: "tel:+573234277975",
-    color: "#f59e0b",
-    primary: false,
-  },
-]
+import { useTranslations } from "next-intl"
 
 const socialLinks = [
   {
@@ -62,6 +24,15 @@ const socialLinks = [
 ]
 
 export function Contact() {
+  const t = useTranslations("contact")
+
+  const contactMethods = [
+    { icon: FaWhatsapp, label: t("whatsapp"), value: "+57 323 427 7975", description: t("whatsappDesc"), href: "https://wa.me/573234277975?text=Hola%20Daniel,%20me%20gustaria%20contactarte", color: "#25D366", primary: true },
+    { icon: Mail, label: t("emailPrincipal"), value: "guevararodriguezdanielfelipe@gmail.com", description: t("emailPrincipalDesc"), href: "mailto:guevararodriguezdanielfelipe@gmail.com", color: "#3b82f6", primary: false },
+    { icon: Mail, label: t("emailSecundario"), value: "grdfelipe@icloud.com", description: t("emailSecundarioDesc"), href: "mailto:grdfelipe@icloud.com", color: "#8b5cf6", primary: false },
+    { icon: Phone, label: t("telefono"), value: "+57 323 427 7975", description: t("telefonoDesc"), href: "tel:+573234277975", color: "#f59e0b", primary: false },
+  ]
+
   return (
     <section id="contacto" className="py-20 bg-background relative overflow-hidden">
       {/* Background decoration */}
@@ -72,12 +43,11 @@ export function Contact() {
         {/* Section Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
-            Contacto
+            {t("titulo")}
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
-            Tienes un proyecto en mente o quieres colaborar? Estoy disponible para
-            proyectos y practicas profesionales.
+            {t("subtitulo")}
           </p>
           {/* Availability */}
           <div className="mt-4 inline-flex items-center gap-3 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20">
@@ -86,7 +56,7 @@ export function Contact() {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
             </span>
             <span className="text-sm font-medium text-green-700 dark:text-green-400">
-              Disponible para proyectos y practicas
+              {t("disponible")}
             </span>
           </div>
         </div>
@@ -178,7 +148,7 @@ export function Contact() {
                 <MapPin className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <p className="text-xs text-muted-foreground uppercase tracking-wide">Ubicacion</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide">{t("ubicacion")}</p>
                 <p className="font-medium text-sm">Pasto, Nariño</p>
               </div>
             </CardContent>

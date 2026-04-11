@@ -3,55 +3,29 @@
 import { GraduationCap, MapPin, Languages, BookOpen, Calendar, Code2, Users, Lightbulb, Target } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-
-const highlights = [
-  {
-    icon: Code2,
-    title: "Desarrollo Web",
-    description: "Aprendiendo desarrollo web con Java, Spring Boot, React y Next.js",
-    color: "#3b82f6",
-  },
-  {
-    icon: Users,
-    title: "Trabajo en equipo",
-    description: "Metodologias agiles, GitFlow y comunicacion efectiva en proyectos colaborativos",
-    color: "#8b5cf6",
-  },
-  {
-    icon: Lightbulb,
-    title: "Aprendizaje continuo",
-    description: "Siempre explorando nuevas tecnologias y mejores practicas de desarrollo",
-    color: "#f59e0b",
-  },
-  {
-    icon: Target,
-    title: "Orientado a resultados",
-    description: "Enfocado en crear soluciones reales que impacten positivamente a las personas",
-    color: "#10b981",
-  },
-]
-
-const personalInfo = [
-  { icon: GraduationCap, label: "Carrera", value: "Ingenieria de Software" },
-  { icon: MapPin, label: "Ciudad", value: "Pasto, Nariño" },
-  { icon: BookOpen, label: "Semestre", value: "5to Semestre" },
-  { icon: Calendar, label: "Nacimiento", value: "26/02/2006" },
-  { icon: Languages, label: "Idiomas", value: "Español (Nativo), Ingles (Basico)" },
-  { icon: GraduationCap, label: "Universidad", value: "Universidad Cooperativa de Colombia" },
-]
-
-const interests = [
-  "Desarrollo Web",
-  "Backend",
-  "APIs REST",
-  "Bases de Datos",
-  "Patrones de Diseño",
-  "GitFlow",
-  "Clean Code",
-  "Arquitectura MVC",
-]
+import { useTranslations } from "next-intl"
 
 export function About() {
+  const t = useTranslations("about")
+
+  const highlights = [
+    { icon: Code2, title: t("highlights.desarrolloWeb"), description: t("highlights.desarrolloWebDesc"), color: "#3b82f6" },
+    { icon: Users, title: t("highlights.trabajoEquipo"), description: t("highlights.trabajoEquipoDesc"), color: "#8b5cf6" },
+    { icon: Lightbulb, title: t("highlights.aprendizaje"), description: t("highlights.aprendizajeDesc"), color: "#f59e0b" },
+    { icon: Target, title: t("highlights.resultados"), description: t("highlights.resultadosDesc"), color: "#10b981" },
+  ]
+
+  const personalInfo = [
+    { icon: GraduationCap, label: t("carrera"), value: t("carreraVal") },
+    { icon: MapPin, label: t("ciudad"), value: t("ciudadVal") },
+    { icon: BookOpen, label: t("semestre"), value: t("semestreVal") },
+    { icon: Calendar, label: t("nacimiento"), value: t("nacimientoVal") },
+    { icon: Languages, label: t("idiomas"), value: t("idiomasVal") },
+    { icon: GraduationCap, label: t("universidadLabel"), value: t("universidadVal") },
+  ]
+
+  const interests = Array.from({ length: 8 }, (_, i) => t(`interesesTags.${i}`))
+
   return (
     <section id="sobre-mi" className="py-20 bg-background relative overflow-hidden">
       {/* Background decorations */}
@@ -62,11 +36,11 @@ export function About() {
         {/* Section Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
-            Sobre Mi
+            {t("titulo")}
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
-            Conoce un poco mas sobre mi perfil y lo que me apasiona
+            {t("subtitulo")}
           </p>
         </div>
 
@@ -76,15 +50,10 @@ export function About() {
             <CardContent className="p-8 sm:p-10">
               <div className="max-w-3xl">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-                  Soy estudiante de{" "}
-                  <strong className="text-primary">Ingenieria de Software</strong> en la
-                  Universidad Cooperativa de Colombia sede Pasto. Estoy aprendiendo desarrollo
-                  web con enfoque en buenas practicas y patrones de diseño.
+                  {t.rich("bio1", { strong: (chunks) => <strong className="text-primary">{chunks}</strong> })}
                 </p>
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Me apasiona el trabajo en equipo con metodologias agiles, el uso de{" "}
-                  <strong className="text-primary">GitFlow</strong> para proyectos colaborativos
-                  y crear soluciones reales que impacten a las personas.
+                  {t.rich("bio2", { strong: (chunks) => <strong className="text-primary">{chunks}</strong> })}
                 </p>
               </div>
             </CardContent>
@@ -155,7 +124,7 @@ export function About() {
           <div className="lg:col-span-3 animate-fade-in-up" style={{ animationDelay: "600ms" }}>
             <h3 className="text-lg font-semibold mb-5 text-muted-foreground uppercase tracking-wide flex items-center gap-3">
               <span className="h-px flex-1 bg-border" />
-              Informacion Personal
+              {t("infoPersonal")}
               <span className="h-px flex-1 bg-border" />
             </h3>
             <div className="grid sm:grid-cols-2 gap-4">
@@ -188,7 +157,7 @@ export function About() {
                     </span>
                   </div>
                   <p className="font-medium text-green-700 dark:text-green-400">
-                    Disponible para proyectos y practicas
+                    {t("disponible")}
                   </p>
                 </CardContent>
               </Card>
@@ -199,7 +168,7 @@ export function About() {
           <div className="lg:col-span-2 animate-fade-in-up" style={{ animationDelay: "700ms" }}>
             <h3 className="text-lg font-semibold mb-5 text-muted-foreground uppercase tracking-wide flex items-center gap-3">
               <span className="h-px flex-1 bg-border" />
-              Intereses
+              {t("intereses")}
               <span className="h-px flex-1 bg-border" />
             </h3>
             <Card className="border-border/50">

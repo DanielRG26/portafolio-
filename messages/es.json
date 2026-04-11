@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "title": "Daniel Felipe Guevara | Portafolio",
+    "description": "Estudiante de Ingenieria de Software en la Universidad Cooperativa de Colombia."
+  },
+  "nav": {
+    "inicio": "Inicio",
+    "sobreMi": "Sobre Mi",
+    "skills": "Skills",
+    "proyectos": "Proyectos",
+    "testimonios": "Testimonios",
+    "educacion": "Educacion",
+    "contacto": "Contacto",
+    "descargarCV": "Descargar CV",
+    "cambiarTema": "Cambiar tema"
+  },
+  "hero": {
+    "disponible": "Disponible para proyectos",
+    "nombre": "Daniel Felipe",
+    "apellido": "Guevara Rodriguez",
+    "roles": {
+      "0": "Estudiante de Ingenieria de Software",
+      "1": "Desarrollador Web Junior",
+      "2": "Apasionado por el Backend"
+    },
+    "ubicacion": "Pasto, Nariño",
+    "universidad": "Universidad Cooperativa de Colombia - 5to Semestre",
+    "periodo": "2024 - Presente",
+    "verProyectos": "Ver proyectos",
+    "contactar": "Contactar"
+  },
+  "about": {
+    "titulo": "Sobre Mi",
+    "subtitulo": "Conoce un poco mas sobre mi perfil y lo que me apasiona",
+    "bio1": "Soy estudiante de <strong>Ingenieria de Software</strong> en la Universidad Cooperativa de Colombia sede Pasto. Estoy aprendiendo desarrollo web con enfoque en buenas practicas y patrones de diseño.",
+    "bio2": "Me apasiona el trabajo en equipo con metodologias agiles, el uso de <strong>GitFlow</strong> para proyectos colaborativos y crear soluciones reales que impacten a las personas.",
+    "highlights": {
+      "desarrolloWeb": "Desarrollo Web",
+      "desarrolloWebDesc": "Aprendiendo desarrollo web con Java, Spring Boot, React y Next.js",
+      "trabajoEquipo": "Trabajo en equipo",
+      "trabajoEquipoDesc": "Metodologias agiles, GitFlow y comunicacion efectiva en proyectos colaborativos",
+      "aprendizaje": "Aprendizaje continuo",
+      "aprendizajeDesc": "Siempre explorando nuevas tecnologias y mejores practicas de desarrollo",
+      "resultados": "Orientado a resultados",
+      "resultadosDesc": "Enfocado en crear soluciones reales que impacten positivamente a las personas"
+    },
+    "infoPersonal": "Informacion Personal",
+    "intereses": "Intereses",
+    "carrera": "Carrera",
+    "carreraVal": "Ingenieria de Software",
+    "ciudad": "Ciudad",
+    "ciudadVal": "Pasto, Nariño",
+    "semestre": "Semestre",
+    "semestreVal": "5to Semestre",
+    "nacimiento": "Nacimiento",
+    "nacimientoVal": "26/02/2006",
+    "idiomas": "Idiomas",
+    "idiomasVal": "Español (Nativo), Ingles (Basico)",
+    "universidadLabel": "Universidad",
+    "universidadVal": "Universidad Cooperativa de Colombia",
+    "disponible": "Disponible para proyectos y practicas",
+    "interesesTags": {
+      "0": "Desarrollo Web",
+      "1": "Backend",
+      "2": "APIs REST",
+      "3": "Bases de Datos",
+      "4": "Patrones de Diseño",
+      "5": "GitFlow",
+      "6": "Clean Code",
+      "7": "Arquitectura MVC"
+    }
+  },
+  "skills": {
+    "titulo": "Lenguajes & Tecnologías",
+    "subtitulo": "Tecnologías que he aprendido y uso en mis proyectos",
+    "herramientas": "Herramientas & Frameworks"
+  },
+  "projects": {
+    "titulo": "Proyectos Destacados",
+    "subtitulo": "Algunos de los proyectos en los que he trabajado",
+    "verGithub": "Ver en GitHub",
+    "verMas": "Ver mas proyectos en GitHub",
+    "preview": "[ preview / captura ]"
+  },
+  "testimonials": {
+    "titulo": "Testimonios",
+    "subtitulo": "Lo que dicen colegas y clientes sobre mi trabajo",
+    "anterior": "Testimonio anterior",
+    "siguiente": "Siguiente testimonio"
+  },
+  "education": {
+    "titulo": "Educacion Academica",
+    "subtitulo": "Mi trayectoria academica y formacion profesional",
+    "enCurso": "En curso",
+    "semestreActual": "Semestre actual",
+    "proyectosAcademicos": "Proyectos academicos",
+    "tecnologiasAprendidas": "Tecnologias aprendidas"
+  },
+  "contact": {
+    "titulo": "Contacto",
+    "subtitulo": "Tienes un proyecto en mente o quieres colaborar? Estoy disponible para proyectos y practicas profesionales.",
+    "disponible": "Disponible para proyectos y practicas",
+    "whatsapp": "WhatsApp",
+    "whatsappDesc": "Respuesta rapida, escríbeme directo",
+    "emailPrincipal": "Email Principal",
+    "emailPrincipalDesc": "Para propuestas y colaboraciones",
+    "emailSecundario": "Email Secundario",
+    "emailSecundarioDesc": "Contacto alternativo",
+    "telefono": "Telefono",
+    "telefonoDesc": "Llamadas y mensajes",
+    "ubicacion": "Ubicacion"
+  },
+  "footer": {
+    "copyright": "© {year} Daniel Felipe Guevara Rodriguez"
+  }
+}

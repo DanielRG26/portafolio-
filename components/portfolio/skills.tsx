@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 import {
   FaJava,
   FaReact,
@@ -56,6 +57,7 @@ const tools = [
 
 export function Skills() {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null)
+  const t = useTranslations("skills")
 
   return (
     <section id="skills" className="py-20 bg-secondary/30 relative overflow-hidden">
@@ -67,11 +69,11 @@ export function Skills() {
         {/* Section Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
-            Lenguajes & Tecnologías
+            {t("titulo")}
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
-            Tecnologías que he aprendido y uso en mis proyectos
+            {t("subtitulo")}
           </p>
         </div>
 
@@ -146,7 +148,7 @@ export function Skills() {
         <div className="animate-fade-in-up" style={{ animationDelay: "500ms" }}>
           <h3 className="text-lg font-semibold mb-8 text-muted-foreground uppercase tracking-wide flex items-center gap-3">
             <span className="h-px flex-1 bg-border" />
-            Herramientas & Frameworks
+            {t("herramientas")}
             <span className="h-px flex-1 bg-border" />
           </h3>
 

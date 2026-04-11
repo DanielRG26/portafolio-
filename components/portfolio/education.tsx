@@ -3,6 +3,7 @@
 import { GraduationCap, BookOpen, MapPin, Calendar, Award, TrendingUp } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { useTranslations } from "next-intl"
 
 const educationItems = [
   {
@@ -33,12 +34,13 @@ const educationItems = [
 ]
 
 const stats = [
-  { icon: Calendar, label: "Semestre actual", value: "5to", color: "#3b82f6" },
-  { icon: Award, label: "Proyectos academicos", value: "6+", color: "#f59e0b" },
-  { icon: TrendingUp, label: "Tecnologias aprendidas", value: "12+", color: "#10b981" },
+  { icon: Calendar, labelKey: "semestreActual", value: "5to", color: "#3b82f6" },
+  { icon: Award, labelKey: "proyectosAcademicos", value: "6+", color: "#f59e0b" },
+  { icon: TrendingUp, labelKey: "tecnologiasAprendidas", value: "12+", color: "#10b981" },
 ]
 
 export function Education() {
+  const t = useTranslations("education")
   return (
     <section id="educacion" className="py-20 bg-secondary/30 relative overflow-hidden">
       {/* Background */}
@@ -49,11 +51,11 @@ export function Education() {
         {/* Section Header */}
         <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
-            Educacion Academica
+            {t("titulo")}
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
-            Mi trayectoria academica y formacion profesional
+            {t("subtitulo")}
           </p>
         </div>
 
@@ -142,7 +144,7 @@ export function Education() {
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
                               </span>
                               <span className="text-xs text-green-600 dark:text-green-400 font-medium">
-                                En curso
+                                {t("enCurso")}
                               </span>
                             </div>
                           )}
@@ -221,7 +223,7 @@ export function Education() {
                     >
                       {stat.value}
                     </p>
-                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                    <p className="text-sm text-muted-foreground">{t(stat.labelKey)}</p>
                   </CardContent>
                 </Card>
               </div>

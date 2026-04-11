@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "title": "Daniel Felipe Guevara | Portfolio",
+    "description": "Software Engineering student at Universidad Cooperativa de Colombia."
+  },
+  "nav": {
+    "inicio": "Home",
+    "sobreMi": "About Me",
+    "skills": "Skills",
+    "proyectos": "Projects",
+    "testimonios": "Testimonials",
+    "educacion": "Education",
+    "contacto": "Contact",
+    "descargarCV": "Download CV",
+    "cambiarTema": "Toggle theme"
+  },
+  "hero": {
+    "disponible": "Available for projects",
+    "nombre": "Daniel Felipe",
+    "apellido": "Guevara Rodriguez",
+    "roles": {
+      "0": "Software Engineering Student",
+      "1": "Junior Web Developer",
+      "2": "Passionate about Backend"
+    },
+    "ubicacion": "Pasto, Nariño",
+    "universidad": "Universidad Cooperativa de Colombia - 5th Semester",
+    "periodo": "2024 - Present",
+    "verProyectos": "View projects",
+    "contactar": "Contact me"
+  },
+  "about": {
+    "titulo": "About Me",
+    "subtitulo": "Learn a little more about my profile and what I'm passionate about",
+    "bio1": "I'm a <strong>Software Engineering</strong> student at Universidad Cooperativa de Colombia in Pasto. I'm learning web development with a focus on best practices and design patterns.",
+    "bio2": "I'm passionate about teamwork with agile methodologies, using <strong>GitFlow</strong> for collaborative projects, and creating real solutions that impact people.",
+    "highlights": {
+      "desarrolloWeb": "Web Development",
+      "desarrolloWebDesc": "Learning web development with Java, Spring Boot, React and Next.js",
+      "trabajoEquipo": "Teamwork",
+      "trabajoEquipoDesc": "Agile methodologies, GitFlow and effective communication in collaborative projects",
+      "aprendizaje": "Continuous Learning",
+      "aprendizajeDesc": "Always exploring new technologies and development best practices",
+      "resultados": "Results Oriented",
+      "resultadosDesc": "Focused on creating real solutions that positively impact people"
+    },
+    "infoPersonal": "Personal Information",
+    "intereses": "Interests",
+    "carrera": "Degree",
+    "carreraVal": "Software Engineering",
+    "ciudad": "City",
+    "ciudadVal": "Pasto, Nariño",
+    "semestre": "Semester",
+    "semestreVal": "5th Semester",
+    "nacimiento": "Birth Date",
+    "nacimientoVal": "02/26/2006",
+    "idiomas": "Languages",
+    "idiomasVal": "Spanish (Native), English (Basic)",
+    "universidadLabel": "University",
+    "universidadVal": "Universidad Cooperativa de Colombia",
+    "disponible": "Available for projects and internships",
+    "interesesTags": {
+      "0": "Web Development",
+      "1": "Backend",
+      "2": "REST APIs",
+      "3": "Databases",
+      "4": "Design Patterns",
+      "5": "GitFlow",
+      "6": "Clean Code",
+      "7": "MVC Architecture"
+    }
+  },
+  "skills": {
+    "titulo": "Languages & Technologies",
+    "subtitulo": "Technologies I've learned and use in my projects",
+    "herramientas": "Tools & Frameworks"
+  },
+  "projects": {
+    "titulo": "Featured Projects",
+    "subtitulo": "Some of the projects I've worked on",
+    "verGithub": "View on GitHub",
+    "verMas": "View more projects on GitHub",
+    "preview": "[ preview / screenshot ]"
+  },
+  "testimonials": {
+    "titulo": "Testimonials",
+    "subtitulo": "What colleagues and clients say about my work",
+    "anterior": "Previous testimonial",
+    "siguiente": "Next testimonial"
+  },
+  "education": {
+    "titulo": "Academic Education",
+    "subtitulo": "My academic journey and professional training",
+    "enCurso": "In progress",
+    "semestreActual": "Current semester",
+    "proyectosAcademicos": "Academic projects",
+    "tecnologiasAprendidas": "Technologies learned"
+  },
+  "contact": {
+    "titulo": "Contact",
+    "subtitulo": "Have a project in mind or want to collaborate? I'm available for projects and professional internships.",
+    "disponible": "Available for projects and internships",
+    "whatsapp": "WhatsApp",
+    "whatsappDesc": "Quick response, message me directly",
+    "emailPrincipal": "Primary Email",
+    "emailPrincipalDesc": "For proposals and collaborations",
+    "emailSecundario": "Secondary Email",
+    "emailSecundarioDesc": "Alternative contact",
+    "telefono": "Phone",
+    "telefonoDesc": "Calls and messages",
+    "ubicacion": "Location"
+  },
+  "footer": {
+    "copyright": "© {year} Daniel Felipe Guevara Rodriguez"
+  }
+}
