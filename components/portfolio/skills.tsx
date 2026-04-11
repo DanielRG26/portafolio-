@@ -29,17 +29,17 @@ import { VscCode } from "react-icons/vsc"
 
 const technologies = [
   { name: "Java", color: "#e84a00", icon: FaJava, level: 90, repo: "https://github.com/DanielRG26/vehuculos_Final" },
-  { name: "Spring Boot", color: "#6db33f", icon: SiSpringboot, level: 85, repo: "https://github.com/DanielRG26/Proyecto-de-dise-o" },
+  { name: "Spring Boot", color: "#6db33f", icon: SiSpringboot, level: 85, repo: "https://github.com/Goloso0006/education-system" },
   { name: "React", color: "#61dafb", icon: FaReact, level: 80, repo: "https://github.com/DanielRG26/coffeeShop_2" },
-  { name: "Next.js", color: "#000000", icon: SiNextdotjs, useForeground: true, level: 75, repo: "https://github.com/DanielRG26/portafolio-" },
+  { name: "Next.js", color: "#000000", icon: SiNextdotjs, useForeground: true, level: 75, repo: "https://github.com/DanielRG26/dash-board" },
   { name: "JavaScript", color: "#f0db4f", icon: SiJavascript, level: 88, repo: "https://github.com/DanielRG26/Calculadora-2.0" },
-  { name: "HTML5", color: "#e44d26", icon: SiHtml5, level: 95, repo: "https://github.com/DanielRG26/dise-o_login-" },
+  { name: "HTML5", color: "#e44d26", icon: SiHtml5, level: 95, repo: "https://github.com/edben110/landing-page" },
   { name: "CSS3", color: "#264de4", icon: SiCss, level: 90, repo: "https://github.com/DanielRG26/dise-o_login-" },
-  { name: "Git", color: "#f05032", icon: FaGitAlt, level: 85, repo: "https://github.com/DanielRG26" },
+  { name: "Git", color: "#f05032", icon: FaGitAlt, level: 85, repo: "https://github.com/DanielRG26?tab=repositories" },
   { name: "MongoDB", color: "#47a248", icon: SiMongodb, level: 78, repo: "https://github.com/DanielRG26/vehuculos_Final" },
   { name: "PostgreSQL", color: "#336791", icon: SiPostgresql, level: 80, repo: "https://github.com/Goloso0006/education-system" },
-  { name: "Python", color: "#3776ab", icon: FaPython, level: 70, repo: "https://github.com/DanielRG26" },
-  { name: "Docker", color: "#0db7ed", icon: FaDocker, level: 65, repo: "https://github.com/DanielRG26" },
+  { name: "Python", color: "#3776ab", icon: FaPython, level: 70, repo: "https://github.com/DanielRG26/Proyecto_Escolar" },
+  { name: "Docker", color: "#0db7ed", icon: FaDocker, level: 65, repo: "https://github.com/DanielRG26?tab=repositories" },
 ]
 
 const tools = [
