@@ -49,15 +49,6 @@ const projects = [
     category: "FULL-STACK",
     categoryColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
   },
-  {
-    title: "Proyecto de Diseño",
-    description:
-      "Aplicacion full-stack con backend en Spring Boot y frontend en JavaScript. Incluye endpoints REST documentados con Postman y arquitectura MVC.",
-    tags: ["Java", "Spring Boot", "JavaScript", "CSS"],
-    github: "https://github.com/DanielRG26/Proyecto-de-dise-o.git",
-    category: "FULL-STACK",
-    categoryColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
-  },
 ]
 
 export function Projects() {
