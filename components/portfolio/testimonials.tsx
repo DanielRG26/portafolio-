@@ -68,11 +68,11 @@ export function Testimonials() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
-        <div className="mb-16 text-center animate-fade-in-up">
+        <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
             Testimonios
           </h2>
-          <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
+          <div className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-4 text-muted-foreground text-lg">
             Lo que dicen colegas y clientes sobre mi trabajo
           </p>

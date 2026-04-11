@@ -65,6 +65,9 @@ export function About() {
             Sobre Mi
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
+          <p className="mt-4 text-muted-foreground text-lg">
+            Conoce un poco mas sobre mi perfil y lo que me apasiona
+          </p>
         </div>
 
         {/* Main bio - full width intro */}

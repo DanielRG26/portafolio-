@@ -70,12 +70,12 @@ export function Contact() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
-        <div className="mb-16 text-center animate-fade-in-up">
+        <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
             Contacto
           </h2>
-          <div className="w-20 h-1 bg-primary rounded-full mx-auto" />
-          <p className="mt-6 text-muted-foreground text-lg max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-primary rounded-full" />
+          <p className="mt-4 text-muted-foreground text-lg">
             Tienes un proyecto en mente o quieres colaborar? Estoy disponible para
             proyectos y practicas profesionales.
           </p>

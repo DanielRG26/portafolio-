@@ -52,6 +52,9 @@ export function Education() {
             Educacion Academica
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
+          <p className="mt-4 text-muted-foreground text-lg">
+            Mi trayectoria academica y formacion profesional
+          </p>
         </div>
 
         {/* Timeline */}

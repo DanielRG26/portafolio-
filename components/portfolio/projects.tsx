@@ -62,22 +62,30 @@ const projects = [
 
 export function Projects() {
   return (
-    <section id="proyectos" className="py-20 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="proyectos" className="py-20 bg-secondary/30 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute top-20 right-10 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-10 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl animate-float-delayed" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
-        <div className="mb-12">
+        <div className="mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-mono uppercase tracking-wider">
             Proyectos Destacados
           </h2>
           <div className="w-20 h-1 bg-primary rounded-full" />
+          <p className="mt-4 text-muted-foreground text-lg">
+            Algunos de los proyectos en los que he trabajado
+          </p>
         </div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <Card
               key={project.title}
-              className="group border-border/50 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col bg-card"
+              className="group border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 flex flex-col bg-card animate-fade-in-up"
+              style={{ animationDelay: `${200 + index * 100}ms` }}
             >
               {/* Preview placeholder */}
               <div className="h-48 bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center border-b border-border/50 relative">
