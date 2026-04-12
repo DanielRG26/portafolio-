@@ -25,7 +25,7 @@ const projects = [
     github: "https://github.com/DanielRG26/vehuculos_Final.git",
     category: "API REST",
     categoryColor: "bg-green-500/10 text-green-600 dark:text-green-400",
-    image: null,
+    image: "/images/projects/vehiculos-crud.svg",
   },
   {
     title: "Coffee Shop",
