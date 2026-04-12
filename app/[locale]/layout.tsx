@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next"
 import { Outfit, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
-import { CustomCursor } from "@/components/portfolio/custom-cursor"
 import { NextIntlClientProvider, useMessages } from "next-intl"
 import { getMessages } from "next-intl/server"
 import { routing } from "@/i18n/routing"
@@ -81,7 +80,6 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <CustomCursor />
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
