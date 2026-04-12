@@ -32,8 +32,8 @@
   "about": {
     "titulo": "About Me",
     "subtitulo": "Learn a little more about my profile and what I'm passionate about",
-    "bio1": "I'm a <strong>Software Engineering</strong> student at Universidad Cooperativa de Colombia in Pasto. I'm learning web development with a focus on best practices and design patterns.",
-    "bio2": "I'm passionate about teamwork with agile methodologies, using <strong>GitFlow</strong> for collaborative projects, and creating real solutions that impact people.",
+    "bio1": "I'm a Software Engineering student at Universidad Cooperativa de Colombia in Pasto. I'm learning web development with a focus on best practices and design patterns.",
+    "bio2": "I'm passionate about teamwork with agile methodologies, using GitFlow for collaborative projects, and creating real solutions that impact people.",
     "highlights": {
       "desarrolloWeb": "Web Development",
       "desarrolloWebDesc": "Learning web development with Java, Spring Boot, React and Next.js",

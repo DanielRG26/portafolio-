@@ -32,8 +32,8 @@
   "about": {
     "titulo": "Sobre Mi",
     "subtitulo": "Conoce un poco mas sobre mi perfil y lo que me apasiona",
-    "bio1": "Soy estudiante de <strong>Ingenieria de Software</strong> en la Universidad Cooperativa de Colombia sede Pasto. Estoy aprendiendo desarrollo web con enfoque en buenas practicas y patrones de diseño.",
-    "bio2": "Me apasiona el trabajo en equipo con metodologias agiles, el uso de <strong>GitFlow</strong> para proyectos colaborativos y crear soluciones reales que impacten a las personas.",
+    "bio1": "Soy estudiante de Ingenieria de Software en la Universidad Cooperativa de Colombia sede Pasto. Estoy aprendiendo desarrollo web con enfoque en buenas practicas y patrones de diseño.",
+    "bio2": "Me apasiona el trabajo en equipo con metodologias agiles, el uso de GitFlow para proyectos colaborativos y crear soluciones reales que impacten a las personas.",
     "highlights": {
       "desarrolloWeb": "Desarrollo Web",
       "desarrolloWebDesc": "Aprendiendo desarrollo web con Java, Spring Boot, React y Next.js",

@@ -50,10 +50,10 @@ export function About() {
             <CardContent className="p-8 sm:p-10">
               <div className="max-w-3xl">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
-                  {t.rich("bio1", { strong: (chunks) => <strong className="text-primary">{chunks}</strong> })}
+                  {t("bio1")}
                 </p>
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  {t.rich("bio2", { strong: (chunks) => <strong className="text-primary">{chunks}</strong> })}
+                  {t("bio2")}
                 </p>
               </div>
             </CardContent>
