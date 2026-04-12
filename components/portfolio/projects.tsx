@@ -15,6 +15,7 @@ const projects = [
     github: "https://github.com/DanielRG26/Calculadora-2.0.git",
     category: "APLICACION",
     categoryColor: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
+    image: "/images/projects/Calculadora 2.0.png",
   },
   {
     title: "Vehiculos CRUD",
@@ -24,6 +25,7 @@ const projects = [
     github: "https://github.com/DanielRG26/vehuculos_Final.git",
     category: "API REST",
     categoryColor: "bg-green-500/10 text-green-600 dark:text-green-400",
+    image: null,
   },
   {
     title: "Coffee Shop",
@@ -33,6 +35,7 @@ const projects = [
     github: "https://github.com/DanielRG26/coffeeShop_2.git",
     category: "FRONTEND",
     categoryColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
+    image: "/images/projects/CoffeShop2.png",
   },
   {
     title: "Diseno Login",
@@ -42,6 +45,7 @@ const projects = [
     github: "https://github.com/DanielRG26/dise-o_login-.git",
     category: "FRONTEND",
     categoryColor: "bg-blue-500/10 text-blue-600 dark:text-blue-400",
+    image: "/images/projects/dise-o_login-.png",
   },
   {
     title: "Education System",
@@ -51,6 +55,7 @@ const projects = [
     github: "https://github.com/Goloso0006/education-system.git",
     category: "BACKEND",
     categoryColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
+    image: "/images/projects/education-sistem.png",
   },
   {
     title: "Memoria Virtual",
@@ -60,6 +65,7 @@ const projects = [
     github: "https://github.com/DanielRG26/MemoriaVirtual.git",
     category: "3D / INTERACTIVO",
     categoryColor: "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400",
+    image: "/images/projects/MemoriaVirtual.png",
   },
 ]
 
@@ -91,14 +97,22 @@ export function Projects() {
               className="group border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 flex flex-col bg-card animate-fade-in-up"
               style={{ animationDelay: `${200 + index * 100}ms` }}
             >
-              {/* Preview placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center border-b border-border/50 relative">
-                <Badge className={`absolute top-3 left-3 ${project.categoryColor} border-0`}>
+              {/* Preview */}
+              <div className="h-48 bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center border-b border-border/50 relative overflow-hidden">
+                <Badge className={`absolute top-3 left-3 z-10 ${project.categoryColor} border-0`}>
                   {project.category}
                 </Badge>
-                <span className="text-muted-foreground text-sm font-mono">
-                  {t("preview")}
-                </span>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <span className="text-muted-foreground text-sm font-mono">
+                    {t("preview")}
+                  </span>
+                )}
               </div>
 
               <CardHeader className="pb-2">
