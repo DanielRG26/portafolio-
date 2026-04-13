@@ -62,7 +62,7 @@ export function Contact() {
         </div>
 
         {/* Contact methods grid - 2x2 */}
-        <div className="grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
           {contactMethods.map((method, index) => {
             const Icon = method.icon
             return (
@@ -137,7 +137,7 @@ export function Contact() {
         </div>
 
         {/* Bottom row: location + social */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {/* Location */}
           <Card
             className="group border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"

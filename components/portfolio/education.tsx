@@ -60,7 +60,7 @@ export function Education() {
         </div>
 
         {/* Timeline */}
-        <div className="relative max-w-4xl mx-auto mb-16">
+        <div className="relative mb-16">
           {/* Vertical line - animated gradient */}
           <div className="absolute left-5 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-border" />
 
@@ -190,7 +190,7 @@ export function Education() {
         </div>
 
         {/* Stats row */}
-        <div className="grid sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
+        <div className="grid sm:grid-cols-3 gap-5">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
