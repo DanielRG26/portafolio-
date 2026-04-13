@@ -47,7 +47,7 @@ export function About() {
         {/* Main bio - full width intro */}
         <div className="mb-16 animate-fade-in-up" style={{ animationDelay: "100ms" }}>
           <Card className="border-primary/20 bg-gradient-to-br from-primary/5 via-background to-accent/5 overflow-hidden">
-            <CardContent className="p-8 sm:p-10">
+            <CardContent className="p-5 sm:p-8 md:p-10">
               <div className="max-w-3xl">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-4">
                   {t("bio1")}

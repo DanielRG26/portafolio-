@@ -48,7 +48,7 @@ export function Hero() {
               <br />
               <span className="text-foreground inline-block animate-slide-in-left" style={{ animationDelay: "160ms" }}>{t("apellido")}</span>
             </h1>
-            <div className="text-xl sm:text-2xl text-muted-foreground font-medium mb-6 h-9 animate-fade-in-up" style={{ animationDelay: "250ms" }}>
+            <div className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-medium mb-6 h-8 sm:h-9 animate-fade-in-up overflow-hidden" style={{ animationDelay: "250ms" }}>
               <span>{displayed}</span>
               <span className="inline-block w-0.5 h-6 sm:h-7 bg-primary ml-1 animate-blink align-middle" />
             </div>
