@@ -58,9 +58,7 @@ export function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href={`/${locale}#inicio`} className="group flex items-center gap-2 font-mono text-lg font-bold text-primary hover:text-primary/80 transition-all duration-300">
-            <span className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground text-sm transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">D</span>
-          </Link>
+          <Link href={`/${locale}#inicio`} className="sr-only">Inicio</Link>
 
           <div className="hidden lg:flex items-center gap-0.5 bg-secondary/50 rounded-full px-1.5 py-1 border border-border/50">
             {navLinks.map((link) => {
