@@ -90,7 +90,7 @@ export function Hero() {
               <div className="absolute -top-4 left-1/4 w-2 h-2 rounded-full bg-primary/40 animate-float" />
               <div className="absolute -bottom-3 right-1/4 w-1.5 h-1.5 rounded-full bg-accent/40 animate-float-delayed" />
               <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-background shadow-2xl group-hover:shadow-primary/25 transition-all duration-500">
-                <Image src="/images/profile.jpeg" alt={profile.name} fill sizes="(min-width: 640px) 288px, 224px" className="object-cover group-hover:scale-105 transition-transform duration-500" preload />
+                <Image src="/images/foto-perfil.jpg" alt={profile.name} fill sizes="(min-width: 640px) 288px, 224px" className="object-cover group-hover:scale-105 transition-transform duration-500" preload />
               </div>
             </div>
           </div>
