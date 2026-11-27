@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { Github, Linkedin, Mail, MapPin, GraduationCap, Calendar, Sparkles } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, GraduationCap, Sparkles } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -67,7 +67,6 @@ export function Hero() {
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8 text-sm text-muted-foreground animate-fade-in-up" style={{ animationDelay: "350ms" }}>
               <span className="flex items-center gap-1.5"><MapPin className="h-4 w-4 text-primary" />{t("ubicacion")}</span>
               <span className="flex items-center gap-1.5"><GraduationCap className="h-4 w-4 text-primary" />{t("universidad")}</span>
-              <span className="flex items-center gap-1.5"><Calendar className="h-4 w-4 text-primary" />{t("periodo")}</span>
             </div>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: "450ms" }}>
               <Button asChild size="lg" className="shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-1 hover:scale-105"><a href="#proyectos">{t("verProyectos")}</a></Button>
