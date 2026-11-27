@@ -25,7 +25,7 @@
       "2": "Apasionado por el Backend"
     },
     "ubicacion": "Pasto, Nariño",
-    "universidad": "Universidad Cooperativa de Colombia - 5to Semestre",
+    "universidad": "Universidad Cooperativa de Colombia",
     "verProyectos": "Ver proyectos",
     "contactar": "Contactar"
   },
@@ -50,8 +50,6 @@
     "carreraVal": "Ingenieria de Software",
     "ciudad": "Ciudad",
     "ciudadVal": "Pasto, Nariño",
-    "semestre": "Semestre",
-    "semestreVal": "5to Semestre",
     "nacimiento": "Nacimiento",
     "nacimientoVal": "26/02/2006",
     "idiomas": "Idiomas",
@@ -92,7 +90,6 @@
     "titulo": "Educacion Academica",
     "subtitulo": "Mi trayectoria academica y formacion profesional",
     "enCurso": "En curso",
-    "semestreActual": "Semestre actual",
     "proyectosAcademicos": "Proyectos academicos",
     "tecnologiasAprendidas": "Tecnologias aprendidas"
   },

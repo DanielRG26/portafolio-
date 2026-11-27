@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useTranslations } from "next-intl"
@@ -121,13 +121,6 @@ export function Education() {
                       <div className="flex items-center gap-1.5 text-sm text-muted-foreground mb-4">
                         <MapPin className="h-3.5 w-3.5" />
                         {item.location}
-                        {item.semester && (
-                          <>
-                            <span className="mx-1">·</span>
-                            <GraduationCap className="h-3.5 w-3.5" />
-                            {item.semester}
-                          </>
-                        )}
                       </div>
 
                       {/* Description */}
@@ -156,7 +149,7 @@ export function Education() {
         </div>
 
         {/* Stats row */}
-        <div className="grid sm:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 gap-5">
           {educationStats.map((stat, index) => {
             const Icon = stat.icon
             return (

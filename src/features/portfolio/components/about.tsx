@@ -1,6 +1,7 @@
-import { GraduationCap, MapPin, Languages, BookOpen, Calendar, Code2, Users, Lightbulb, Target } from "lucide-react"
+import { GraduationCap, MapPin, Languages, Calendar, Code2, Users, Lightbulb, Target } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { cn } from "@/lib/utils"
 import { useTranslations } from "next-intl"
 
 export function About() {
@@ -16,10 +17,9 @@ export function About() {
   const personalInfo = [
     { icon: GraduationCap, label: t("carrera"), value: t("carreraVal") },
     { icon: MapPin, label: t("ciudad"), value: t("ciudadVal") },
-    { icon: BookOpen, label: t("semestre"), value: t("semestreVal") },
     { icon: Calendar, label: t("nacimiento"), value: t("nacimientoVal") },
     { icon: Languages, label: t("idiomas"), value: t("idiomasVal") },
-    { icon: GraduationCap, label: t("universidadLabel"), value: t("universidadVal") },
+    { icon: GraduationCap, label: t("universidadLabel"), value: t("universidadVal"), className: "sm:col-span-2" },
   ]
 
   const interests = Array.from({ length: 8 }, (_, i) => t(`interesesTags.${i}`))
@@ -129,7 +129,10 @@ export function About() {
               {personalInfo.map((item) => (
                 <Card
                   key={item.label}
-                  className="group border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  className={cn(
+                    "group border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1",
+                    item.className,
+                  )}
                 >
                   <CardContent className="p-4 flex items-center gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
