@@ -8,7 +8,7 @@ export const profile = {
   },
   linkedin: {
     name: "Daniel Guevara",
-    url: "https://www.linkedin.com/in/daniel-felipe-guevara-rodriguez-3b7586208",
+    url: "https://www.linkedin.com/in/dnielrodro",
   },
   email: "guevararodriguezdanielfelipe@gmail.com",
   alternateEmail: "grdfelipe@icloud.com",
