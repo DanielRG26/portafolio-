@@ -32,6 +32,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Spring Boot", "Apache Kafka", "PostgreSQL"],
     github: "https://github.com/edben110/Zero-Trust",
     category: "security",
+    image: "/images/projects/zero-trust.webp",
   },
   {
     id: "geodudas",
@@ -39,6 +40,7 @@ export const projects: Project[] = [
     tags: ["Angular", "TypeScript", "MapLibre GL JS"],
     github: "https://github.com/edben110/Geodudas",
     category: "education",
+    image: "/images/projects/geodudas.webp",
   },
   {
     id: "code-runner",
@@ -46,6 +48,7 @@ export const projects: Project[] = [
     tags: ["JavaScript", "Three.js", "WebGL"],
     github: "https://github.com/DanielRG26/Code_Runner_3.0",
     category: "game",
+    image: "/images/projects/code-runner.webp",
   },
   {
     id: "analisis-accidentes",
@@ -53,5 +56,6 @@ export const projects: Project[] = [
     tags: ["Python", "PySpark", "PostgreSQL", "Power BI"],
     github: "https://github.com/edben110/AnalisisAccidentesTransito",
     category: "data",
+    image: "/images/projects/analisis-accidentes.webp",
   },
 ]
