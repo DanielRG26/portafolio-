@@ -77,8 +77,24 @@
     "titulo": "Proyectos Destacados",
     "subtitulo": "Algunos de los proyectos en los que he trabajado",
     "verGithub": "Ver en GitHub",
-    "verMas": "Ver mas proyectos en GitHub",
-    "preview": "[ preview / captura ]"
+    "verProyectoGithub": "Ver {project} en GitHub",
+    "verMas": "Ver más proyectos en GitHub",
+    "categories": {
+      "application": "Aplicación",
+      "backend": "Backend",
+      "security": "Seguridad",
+      "education": "Educación",
+      "game": "Videojuego",
+      "data": "Análisis de datos"
+    },
+    "descriptions": {
+      "calculadora-inteligente": "Calculadora avanzada con historial de operaciones y funciones matemáticas adicionales.",
+      "education-system": "Sistema educativo con roles de usuario, control académico y gestión de cursos.",
+      "zero-trust": "Plataforma de votación con arquitectura de confianza cero y tableros de resultados nacionales y regionales en tiempo real.",
+      "geodudas": "Aplicación para practicar geografía mediante misiones sobre países, banderas y lugares de Colombia en un mapa interactivo.",
+      "code-runner": "Videojuego 3D de plataformas con niveles progresivos, obstáculos y enemigos.",
+      "analisis-accidentes": "Análisis de accidentes de tránsito en Estados Unidos con visualizaciones interactivas de tendencias y distribución por estado."
+    }
   },
   "testimonials": {
     "titulo": "Testimonios",

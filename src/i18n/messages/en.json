@@ -77,8 +77,24 @@
     "titulo": "Featured Projects",
     "subtitulo": "Some of the projects I've worked on",
     "verGithub": "View on GitHub",
+    "verProyectoGithub": "View {project} on GitHub",
     "verMas": "View more projects on GitHub",
-    "preview": "[ preview / screenshot ]"
+    "categories": {
+      "application": "Application",
+      "backend": "Backend",
+      "security": "Security",
+      "education": "Education",
+      "game": "Video Game",
+      "data": "Data Analysis"
+    },
+    "descriptions": {
+      "calculadora-inteligente": "Advanced calculator with operation history and additional mathematical functions.",
+      "education-system": "Education management system with user roles, academic tracking, and course management.",
+      "zero-trust": "Voting platform with a zero-trust architecture and real-time dashboards for national and regional results.",
+      "geodudas": "Geography learning app with missions about countries, flags, and places in Colombia on an interactive map.",
+      "code-runner": "3D platform game with progressively challenging levels, obstacles, and enemies.",
+      "analisis-accidentes": "Analysis of traffic accidents in the United States, with interactive visualizations of trends and their distribution by state."
+    }
   },
   "testimonials": {
     "titulo": "Testimonials",

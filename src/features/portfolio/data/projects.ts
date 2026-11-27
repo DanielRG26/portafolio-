@@ -1,30 +1,57 @@
+export type ProjectCategory = "application" | "backend" | "security" | "education" | "game" | "data"
+
 export interface Project {
+  id: string
   title: string
-  description: string
   tags: string[]
   github: string
-  category: string
-  categoryColor: string
-  image: string | null
+  category: ProjectCategory
+  image?: string
 }
 
 export const projects: Project[] = [
   {
-    title: "Calculadora 2.0",
-    description: "Calculadora avanzada con historial de operaciones y funciones matematicas extendidas.",
+    id: "calculadora-inteligente",
+    title: "Calculadora Inteligente",
     tags: ["HTML5", "CSS3", "JavaScript"],
     github: "https://github.com/DanielRG26/Calculadora-2.0.git",
-    category: "APLICACION",
-    categoryColor: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
+    category: "application",
     image: "/images/projects/Calculadora 2.0.png",
   },
   {
+    id: "education-system",
     title: "Education System",
-    description: "Sistema educativo completo con roles de usuario, control academico y gestion de cursos.",
     tags: ["Java", "Spring Boot", "MySQL"],
     github: "https://github.com/Goloso0006/education-system.git",
-    category: "BACKEND",
-    categoryColor: "bg-purple-500/10 text-purple-600 dark:text-purple-400",
+    category: "backend",
     image: "/images/projects/education-sistem.png",
+  },
+  {
+    id: "zero-trust",
+    title: "Zero Trust",
+    tags: ["Next.js", "Spring Boot", "Apache Kafka", "PostgreSQL"],
+    github: "https://github.com/edben110/Zero-Trust",
+    category: "security",
+  },
+  {
+    id: "geodudas",
+    title: "GeoDudas",
+    tags: ["Angular", "TypeScript", "MapLibre GL JS"],
+    github: "https://github.com/edben110/Geodudas",
+    category: "education",
+  },
+  {
+    id: "code-runner",
+    title: "Code Runner 3.0",
+    tags: ["JavaScript", "Three.js", "WebGL"],
+    github: "https://github.com/DanielRG26/Code_Runner_3.0",
+    category: "game",
+  },
+  {
+    id: "analisis-accidentes",
+    title: "Análisis de Accidentes de Tránsito",
+    tags: ["Python", "PySpark", "PostgreSQL", "Power BI"],
+    github: "https://github.com/edben110/AnalisisAccidentesTransito",
+    category: "data",
   },
 ]
